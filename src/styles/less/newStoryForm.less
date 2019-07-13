@@ -1,0 +1,43 @@
+// out: ../newStoryForm.css , compress: true
+
+.new-story-form-cont {
+  margin-top: 10%;
+  .new-story-form {
+    display: flex;
+    flex-direction: column;
+    .form-group {
+      label {
+        font-size: 1.7em;
+      }
+      input {
+        border: none;
+        border-bottom: 1px solid gray;
+        height: 70px;
+        &::placeholder {
+          font-size: 1.3em;
+        }
+      }
+      * {
+        margin: 2%;
+      }
+      .quotetext-area {
+        border: 1px solid grey;
+        height: 140px;
+        margin-bottom: 10%;
+      }
+    }
+    .submitBtn {
+      align-self: flex-end;
+      margin-bottom: 10%;
+    }
+    .fileUploader {
+      width: 20%;
+      .fileContainer {
+        align-items: start
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+}

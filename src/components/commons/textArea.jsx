@@ -1,15 +1,15 @@
 import React from "react";
 
-const Input = ({ name, label, error, placeholder, ...rest }) => {
+const TextArea = ({ name, label, error, placeholder, ...rest }) => {
   return (
     <div className="form-group">
       <label htmlFor={name}>{label}</label>
-      <input
+      <textarea
         {...rest}
         name={name}
         id={name}
         autoFocus
-        className={"form-control " + name + "Input"}
+        className={"form-control " + name + "text-area"}
         placeholder={placeholder}
       />
       {error && <div className="alert alert-danger">{error}</div>}
@@ -17,4 +17,4 @@ const Input = ({ name, label, error, placeholder, ...rest }) => {
   );
 };
 
-export default Input;
+export default TextArea;

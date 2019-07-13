@@ -18,7 +18,7 @@ class CardBoard extends Component {
     return (
       <React.Fragment>
         <TopMenu
-          string="Mes elements"
+          string="Mes éléments"
           className="home-top-menu"
           btnProps={{
             string: "Ajouter",

@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import CardBoard from "./components/cardBoard";
+import NewStoryForm from "./components/newStoryForm";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" exact component={CardBoard} />
-        {/* <Route path="/new" exact component={StoryForm} /> */}
+        <Route path="/new" exact component={NewStoryForm} />
       </Switch>
       <Footer />
     </div>
