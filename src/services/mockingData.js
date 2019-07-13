@@ -8,7 +8,7 @@ export function mockingData() {
   var savedData = localStorage.getItem("alcoolStories");
   if (savedData !== null) return JSON.parse(savedData);
 
-  // If not return initial data
+  // If not set and return initial data
   const initalData = [
     {
       title: "Absolut",
@@ -29,6 +29,7 @@ export function mockingData() {
       author: "JCVD"
     }
   ];
+
   localStorage.setItem("alcoolStories", JSON.stringify(initalData));
   return JSON.parse(localStorage.getItem("alcoolStories"));
 }
