@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import CardBoard from "./components/cardBoard";
@@ -9,7 +9,8 @@ function App() {
     <div className="container-fluid site-container">
       <Header />
       <Switch>
-        <CardBoard />
+        <Route path="/" exact component={CardBoard} />
+        {/* <Route path="/new" exact component={StoryForm} /> */}
       </Switch>
       <Footer />
     </div>
