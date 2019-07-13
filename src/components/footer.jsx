@@ -10,7 +10,7 @@ const Footer = () => {
         <h2>
           Made with
           <img className="heart-logo" src={heart} alt="Love" />
-          by
+          for
           <img className="noc-logo" src={noc} alt="Logo NoConsulting" />
         </h2>
       </div>

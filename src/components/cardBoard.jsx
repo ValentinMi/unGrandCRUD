@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import Card from "./commons/card";
-// IMG
-import absolute from "../img/absolute.jpeg";
-import beer from "../img/beer.jpg";
-import water from "../img/water.jpeg";
-// CSS
+import { mockingData } from "../services/mockingData";
+
 import "../styles/cardBoard.css";
 
 class CardBoard extends Component {
@@ -14,44 +11,12 @@ class CardBoard extends Component {
   };
 
   componentDidMount() {
-    this.getLocalData();
+    console.log(mockingData());
+    this.setState({ alcoolStories: mockingData() });
   }
 
-  getLocalData = () => {
-    // Try to get data from localStorage
-    const dataSave = localStorage.getItem("alcoolStories");
-    if (dataSave === null) {
-      // If null set intial state
-      this.setState({
-        alcoolStories: [
-          {
-            title: "Absolut",
-            imgSrc: absolute,
-            quote:
-              "L'alcool est la réponse. Je ne me rapelle plus de la question",
-            author: "Valentin Misiaszek"
-          },
-          {
-            title: "UPD",
-            imgSrc: beer,
-            quote: "Une petite dernière ? ",
-            author: "Valentin Misiaszek"
-          },
-          {
-            title: "Lendemain",
-            imgSrc: water,
-            quote: "J'adore l'eau...",
-            author: "JCVD"
-          }
-        ]
-      });
-    } else {
-      // If data, assign it as state
-      this.setState({ alcoolStories: dataSave });
-    }
-  };
-
   render() {
+    console.log(this.state.alcoolStories);
     const { alcoolStories } = this.state;
     return (
       <React.Fragment>
