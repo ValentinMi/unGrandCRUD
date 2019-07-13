@@ -7,12 +7,15 @@ const Card = ({ story }) => {
   return (
     <div className="card">
       <img src={imgSrc} alt="Boisson" />
+      <span className="story-title">{title}</span>
       <div className="card-body">
-        <h5 className="card-title">{title}</h5>
-        <p className="card-text">{quote}</p>
-        <span>{author}</span>
-        <button className="btn btn-primary">Modifier</button>
-        <button className="btn btn-danger">Supprimer</button>
+        <h3 className="card-title">Citation</h3>
+        <h4 className="card-text">"{quote}"</h4>
+        <h4 className="card-author">{author}</h4>
+        <div className="row card-btn-cont">
+          <button className="btn btn-primary btn-lg card-btn">Modifier</button>
+          <button className="btn btn-danger btn-lg card-btn">Supprimer</button>
+        </div>
       </div>
     </div>
   );

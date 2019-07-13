@@ -1,0 +1,41 @@
+// out: ../card.css, compress: true
+
+.card {
+  margin: 10%;
+  img {
+    width: 100%;
+    height: 40vh;
+    border-radius: 1%;
+  }
+  .story-title {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translatex(-50%);
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5%;
+    height: 26vh;
+    .card-title {
+      font-weight: bold;
+    }
+    .card-author {
+      font-weight: bold;
+      text-align: end;
+    }
+    .card-btn-cont {
+      justify-content: space-between;
+      margin: 9% 9% 0;
+      .card-btn {
+        width: 40%;
+        height: 5vh;
+      }
+    }
+  }
+}
