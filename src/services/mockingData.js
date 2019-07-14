@@ -20,7 +20,7 @@ export function mockingData() {
       title: "UPD",
       imgSrc: beer,
       quote: "Une petite dernière ? ",
-      author: "Valentin Misiaszek"
+      author: "Le bon ami"
     },
     {
       title: "Lendemain",

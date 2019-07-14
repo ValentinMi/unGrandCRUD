@@ -1,1 +1,1 @@
-.card-cont{display:flex;justify-content:center}.card-cont .grey-bckgrnd{background:#f0f0f0;width:95%;display:flex;justify-content:space-around;margin:4vh;padding:0 4%;border-radius:.25rem}
+.card-cont{display:flex;justify-content:center}.card-cont .grey-bckgrnd{background:#f0f0f0;width:95%;display:flex;justify-content:flex-start;margin:4vh;padding:0 4%;border-radius:.25rem}

@@ -1,6 +1,7 @@
 import React from "react";
 import Joi from "joi-browser";
 import ImageUploader from "react-images-upload";
+import { toast } from "react-toastify";
 // COMP
 import Form from "./commons/form";
 import TopMenu from "./commons/topMenu";
@@ -16,6 +17,7 @@ class NewStoryForm extends Form {
     errors: {}
   };
 
+  // Schema for Joi validation
   schema = {
     title: Joi.string()
       .required()
@@ -33,7 +35,10 @@ class NewStoryForm extends Form {
 
   doSubmit = () => {
     const data = JSON.parse(localStorage.getItem("alcoolStories"));
-    console.log(data);
+    data.push(this.state.data);
+    localStorage.setItem("alcoolStories", JSON.stringify(data));
+    this.props.history.push("/");
+    toast.info("Story ajoutéé");
   };
 
   onImgDrop = pic => {
