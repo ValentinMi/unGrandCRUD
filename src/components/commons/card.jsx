@@ -4,11 +4,11 @@ import "../../styles/card.css";
 
 const Card = ({ story, onDelete, onUpdate, index }) => {
   // Destructure storie
-  const { title, imgSrc, quote, author } = story;
+  const { title, img, quote, author } = story;
   return (
     <div className="col-md-4 col-12">
       <div className="card">
-        <img src={imgSrc} alt="Boisson" />
+        <img src={img} alt="Boisson" />
         <span className="story-title">{title}</span>
         <div className="card-body">
           <h3 className="card-title">Citation</h3>

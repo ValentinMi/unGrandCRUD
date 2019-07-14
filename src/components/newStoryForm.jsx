@@ -9,7 +9,6 @@ import TopMenu from "./commons/topMenu";
 import loadImg from "../img/loadImg.png";
 // CSS
 import "../styles/topMenu.css";
-import "../styles/newStoryForm.css";
 
 class NewStoryForm extends Form {
   state = {

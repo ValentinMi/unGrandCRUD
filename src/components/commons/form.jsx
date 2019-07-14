@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Joi from "joi-browser";
 import Input from "./input";
 import TextArea from "./textArea";
+import "../../styles/storyForm.css";
 
 class Form extends Component {
   state = {
@@ -48,11 +49,11 @@ class Form extends Component {
     this.setState({ data, errors });
   };
 
-  renderButton(label, className) {
+  renderButton(label, className, verb) {
     return (
       <button
         onClick={this.handleSubmit}
-        disabled={this.validate()}
+        disabled={verb === "update" ? false : this.validate()}
         className={className}
       >
         {label}

@@ -12,19 +12,19 @@ export function mockingData() {
   const initalData = [
     {
       title: "Trou noir",
-      imgSrc: absolute,
+      img: absolute,
       quote: "L'alcool est la réponse. Je ne me rapelle plus de la question",
       author: "Valentin Misiaszek"
     },
     {
       title: "UPD",
-      imgSrc: beer,
+      img: beer,
       quote: "Une petite dernière ? ",
       author: "Le bon ami"
     },
     {
       title: "Lendemain",
-      imgSrc: water,
+      img: water,
       quote: "J'adore l'eau...",
       author: "JCVD"
     }
