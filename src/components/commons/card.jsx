@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/card.css";
 
-const Card = ({ story, onDelete, index }) => {
+const Card = ({ story, onDelete, onUpdate, index }) => {
   // Destructure storie
   const { title, imgSrc, quote, author } = story;
   return (
@@ -18,6 +18,7 @@ const Card = ({ story, onDelete, index }) => {
             <Link
               to={"/modify/" + index}
               className="btn btn-primary btn-lg card-btn"
+              onClick={() => onUpdate()}
             >
               Modifier
             </Link>

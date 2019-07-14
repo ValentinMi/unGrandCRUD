@@ -11,16 +11,16 @@ class UpdateStoryForm extends Form {
     errors: {}
   };
 
+  componentDidMount() {
+    this.setState({ storyId: this.props.match.params.id });
+  }
+
   // Schema for Joi validation
   schema = {
-    title: Joi.string()
-    .label("Titre"),
-    img: Joi.array()
-    .label("Photo"),
-    author: Joi.string()
-    .label("Auteur"),
-    quote: Joi.string()
-    .label("Citation")
+    title: Joi.string().label("Titre"),
+    img: Joi.array().label("Photo"),
+    author: Joi.string().label("Auteur"),
+    quote: Joi.string().label("Citation")
   };
 
   doSubmit = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -15,7 +15,8 @@ function App() {
       <Switch>
         <Route path="/" exact component={CardBoard} />
         <Route path="/new" exact component={NewStoryForm} />
-        <Route path="/modify" exact component={UpdateStoryForm} />
+        <Route path="/modify/:id" exact component={UpdateStoryForm} />
+        <Redirect to="/" />
       </Switch>
       <Footer />
     </div>

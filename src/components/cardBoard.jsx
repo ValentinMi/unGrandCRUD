@@ -20,6 +20,10 @@ class CardBoard extends Component {
     }
   }
 
+  handleUpdate = index => {
+    this.props.history.push("/" + index);
+  };
+
   handleDelete = index => {
     const { alcoolStories } = this.state;
     let stories = [...alcoolStories];
@@ -49,6 +53,7 @@ class CardBoard extends Component {
                 key={story.title}
                 story={story}
                 onDelete={this.handleDelete.bind(this, index)}
+                onUpdate={this.handleUpdate.bind(this, index)}
               />
             ))}
           </div>
