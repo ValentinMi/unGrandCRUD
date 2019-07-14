@@ -11,7 +11,7 @@ export function mockingData() {
   // If not set and return initial data
   const initalData = [
     {
-      title: "Absolut",
+      title: "Trou noir",
       imgSrc: absolute,
       quote: "L'alcool est la réponse. Je ne me rapelle plus de la question",
       author: "Valentin Misiaszek"
