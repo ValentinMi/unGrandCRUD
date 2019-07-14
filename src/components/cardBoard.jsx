@@ -20,7 +20,7 @@ class CardBoard extends Component {
     }
   }
 
-  handleDelete = (index, e) => {
+  handleDelete = index => {
     const { alcoolStories } = this.state;
     let stories = [...alcoolStories];
     stories.splice(index, 1);
@@ -45,6 +45,7 @@ class CardBoard extends Component {
             {/* Map each story in an card */}
             {alcoolStories.map((story, index) => (
               <Card
+                index={index}
                 key={story.title}
                 story={story}
                 onDelete={this.handleDelete.bind(this, index)}

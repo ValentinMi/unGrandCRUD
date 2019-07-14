@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../styles/card.css";
 
-const Card = ({ story, onDelete }) => {
+const Card = ({ story, onDelete, index }) => {
   // Destructure storie
   const { title, imgSrc, quote, author } = story;
   return (
@@ -14,9 +15,12 @@ const Card = ({ story, onDelete }) => {
           <h4 className="card-text">"{quote}"</h4>
           <h4 className="card-author">{author}</h4>
           <div className="row card-btn-cont">
-            <button className="btn btn-primary btn-lg card-btn">
+            <Link
+              to={"/modify/" + index}
+              className="btn btn-primary btn-lg card-btn"
+            >
               Modifier
-            </button>
+            </Link>
             <button
               onClick={() => onDelete()}
               className="btn btn-danger btn-lg card-btn"
