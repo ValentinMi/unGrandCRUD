@@ -6,6 +6,9 @@
   margin: 8% 10% 3%;
   .addBtn {
     width: 150px;
+    @media (max-width: 769px) {
+      height: 50%;
+    }
   }
 }
 
@@ -17,9 +20,18 @@
   margin-top: 8%;
   h1 {
     transform: translateX(50%);
+    @media (max-width: 767px) {
+      transform: translateX(0);
+      font-size: 1.5em;
+      text-align: end;
+      margin-right: 5%;
+    }
   }
   .returnBtn {
     margin-left: 10%;
     width: 150px;
+    @media (max-width: 767px) {
+      height: 50px;
+    }
   }
 }

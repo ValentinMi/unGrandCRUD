@@ -2,12 +2,16 @@
 
 .card {
   margin: 10%;
+  @media (max-width: 767px) {
+    margin: 10% 0;
+  }
   img {
     width: 100%;
     height: 40vh;
     border-radius: 1%;
   }
   .story-title {
+    text-align: center;
     color: white;
     font-size: 2em;
     font-weight: bold;
@@ -26,6 +30,9 @@
     }
     .card-text {
       height: 60px;
+      @media (max-width: 767px) {
+        height: auto;
+      }
     }
     .card-author {
       font-weight: bold;
@@ -40,6 +47,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @media (max-width: 767px) {
+          height: auto;
+          width: 45%;
+        }
       }
     }
   }

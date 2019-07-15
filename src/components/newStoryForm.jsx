@@ -53,7 +53,7 @@ class NewStoryForm extends Form {
       <React.Fragment>
         <TopMenu
           string="Ajouter un élément"
-          className="col-6 new-form-top-menu"
+          className="col-12 col-md-6 new-form-top-menu"
           btnProps={{
             string: "Retour",
             className: "btn btn-danger btn-lg returnBtn",
