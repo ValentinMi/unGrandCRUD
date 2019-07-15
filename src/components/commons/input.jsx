@@ -8,7 +8,6 @@ const Input = ({ name, label, error, placeholder, ...rest }) => {
         {...rest}
         name={name}
         id={name}
-        autoFocus
         className={"form-control " + name + "Input"}
         placeholder={placeholder}
       />

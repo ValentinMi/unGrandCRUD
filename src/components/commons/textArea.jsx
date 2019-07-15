@@ -8,7 +8,6 @@ const TextArea = ({ name, label, error, placeholder, ...rest }) => {
         {...rest}
         name={name}
         id={name}
-        autoFocus
         className={"form-control " + name + "text-area"}
         placeholder={placeholder}
       />
